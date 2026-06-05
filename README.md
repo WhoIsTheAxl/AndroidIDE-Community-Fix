@@ -60,6 +60,7 @@ Only use it if you understand the trade-off:
 # Restore original sources.list
 cp $PREFIX/etc/apt/sources.list.bak $PREFIX/etc/apt/sources.list
 apt update
+```
 
 ✅ The error should be gone!
 ✅ Tested!
