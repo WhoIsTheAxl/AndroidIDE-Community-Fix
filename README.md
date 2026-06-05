@@ -13,27 +13,28 @@ pkg install nano
 2. Find the AndroidIDE repository file
 
 ```bash
-ls $PREFIX/etc/apt/sources.list.d/
+ls $PREFIX/etc/apt/sources.list
 ```
 
-You're looking for a file named androidide.list or similar.
+You're looking for a file named sources.list
 
 3. Edit the file
 
 ```bash
-nano $PREFIX/etc/apt/sources.list.d/androidide.list
+nano $PREFIX/etc/apt/sources.list
 ```
 
 4. Change this line (what you probably have)
 
 ```
-deb https://packages.androidide.com/apt/termux-main stable InRelease
+# The main AndroidIDE repository
+deb https://packages.androidide.com/apt/termux-main/ stable main
 ```
 
 5. To this (the fix)
 
 ```
-deb [trusted=yes] https://packages.androidide.com/apt/termux-main stable InRelease
+deb [trusted=yes] https://packages.androidide.com/apt/termux-main stable main
 ```
 
 6. Save and exit
