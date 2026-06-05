@@ -47,5 +47,19 @@ Ctrl+X → Y → Enter
 apt update
 ```
 
+## ⚠️ Security Note
+
+This fix disables GPG verification for the AndroidIDE repository.
+Only use it if you understand the trade-off:
+- ✅ Gets AndroidIDE working immediately
+- ❌ Reduces package security (theoretical risk)
+
+## 🔄 How to Revert (When Key Is Fixed)
+
+```bash
+# Restore original sources.list
+cp $PREFIX/etc/apt/sources.list.bak $PREFIX/etc/apt/sources.list
+apt update
+
 ✅ The error should be gone!
 ✅ Tested!
